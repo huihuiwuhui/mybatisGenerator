@@ -3,7 +3,6 @@ package org.mybatis.generator;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.net.URISyntaxException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +16,9 @@ import org.mybatis.generator.internal.DefaultShellCallback;
 import org.xml.sax.InputSource;
 
 /**
- * 描述：
+ * 描述：3
+ * 
+ * 
  * @since 1.9.10
  * @version 1.9.10
  * @作者：niexiaohui
@@ -25,9 +26,9 @@ import org.xml.sax.InputSource;
  * @修改记录：
  */
 public class StartUp {
-    public static void main(String[] args) throws URISyntaxException {
+    public static void main(String[] args) throws Exception {
         try {
-        	//args = new String[] {"F:\\java\\gencoder\\test.xml"};
+        	args = new String[] {"F:\\java\\generator\\mybatisGenerator\\src\\main\\resources\\generatorConfig.xml"};
         	if (args.length==0) {
         		System.out.println("配置文件不能为空");
         		System.exit(0);

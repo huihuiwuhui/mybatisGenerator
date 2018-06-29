@@ -31,7 +31,7 @@
 	(property*,plugin*,commentGenerator?,jdbcConnection,javaTypeResolver?,javaModelGenerator,sqlMapGenerator?,javaClientGenerator?,table+) 
 	-->
 
-    <context id="MysqlTables" defaultModelType="flat" targetRuntime="MyBatis3">
+    <context id="MysqlTables" defaultModelType="flat" targetRuntime="org.mybatis.generator.MyIntrospectedTableMyBatis3SimpleImpl">
     	
 		<property name="beginningDelimiter" value="`"/>
 		<property name="endingDelimiter" value="`"/> 
@@ -84,18 +84,18 @@
 		</javaModelGenerator>
 
 		<!-- 生成的映射文件包名和位置 xml-->  
-        <sqlMapGenerator targetPackage="com.zjt.mapper" targetProject="E:\generator">
+        <sqlMapGenerator targetPackage="mapper" targetProject="E:\generator">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
 		
 		<!-- 生成DAO的包名和位置 接口java-->
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.zjt.dao" targetProject="E:\generator">
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.xyy.ms.finance.dao" targetProject="E:\generator">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
 
 
 <table  tableName="finance_purchase_payment" domainObjectName="PurchasePayment" ></table>
- <table tableName="finance_other_payment" domainObjectName="OtherPayment" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+<!--  <table tableName="finance_other_payment" domainObjectName="OtherPayment" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
 		 <table tableName="finance_other_payment_detail" domainObjectName="OtherPaymentDetail" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
 		  <table tableName="finance_other_payment_red" domainObjectName="OtherPaymentRed" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
 		   <table tableName="finance_purchase_invoice" domainObjectName="PurchaseInvoice" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
@@ -113,7 +113,7 @@
 			<table tableName="finance_supplier_balance" domainObjectName="SupplierBalance" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
 			<table tableName="finance_supplier_payment_record" domainObjectName="SupplierPaymentRecord" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
 <table tableName="finance_purchase_payment_application" domainObjectName="PurchasePaymentApplication" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
-
+ -->
     </context>
 </generatorConfiguration>
 

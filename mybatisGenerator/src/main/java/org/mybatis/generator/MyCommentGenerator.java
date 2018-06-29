@@ -165,9 +165,9 @@ public class MyCommentGenerator implements CommentGenerator{
         if (suppressAllComments) {
             return;
         }
-      method.addJavaDocLine("/**");
-      addJavadocTag(method, false);
-      method.addJavaDocLine(" */");
+     // method.addJavaDocLine("/**");
+     // addJavadocTag(method, false);
+     // method.addJavaDocLine(" */");
     }
 
     public void addGetterComment(Method method, IntrospectedTable introspectedTable,
@@ -175,7 +175,7 @@ public class MyCommentGenerator implements CommentGenerator{
         if (suppressAllComments) {
             return;
         }
-        method.addJavaDocLine("/**");
+      /*  method.addJavaDocLine("/**");
         StringBuilder sb = new StringBuilder();
         sb.append(" * ");
         sb.append(introspectedColumn.getRemarks());
@@ -186,7 +186,7 @@ public class MyCommentGenerator implements CommentGenerator{
         sb.append(" ");
         sb.append(introspectedColumn.getRemarks());
         method.addJavaDocLine(sb.toString().replace("\n", " "));
-        method.addJavaDocLine(" */");
+        method.addJavaDocLine(" *\/");*/
     }
 
     public void addSetterComment(Method method, IntrospectedTable introspectedTable,
@@ -194,7 +194,7 @@ public class MyCommentGenerator implements CommentGenerator{
         if (suppressAllComments) {
             return;
         }
-        method.addJavaDocLine("/**");
+       /* method.addJavaDocLine("/**");
         StringBuilder sb = new StringBuilder();
         sb.append(" * ");
         sb.append(introspectedColumn.getRemarks());
@@ -206,7 +206,8 @@ public class MyCommentGenerator implements CommentGenerator{
         sb.append(" ");
         sb.append(introspectedColumn.getRemarks());
         method.addJavaDocLine(sb.toString().replace("\n", " "));
-        method.addJavaDocLine(" */");
+        method.addJavaDocLine(" *\/");"
+        */		
     }
 
     public void addClassComment(InnerClass innerClass, IntrospectedTable introspectedTable, boolean markAsDoNotDelete) {
